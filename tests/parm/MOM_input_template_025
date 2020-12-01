@@ -684,7 +684,7 @@ KAPPA_SHEAR_ALL_LAYER_TKE_BUG = True !   [Boolean] default = True
 
 ! === module MOM_diabatic_aux ===
 ! The following parameters are used for auxiliary diabatic processes.
-PRESSURE_DEPENDENT_FRAZIL = True !   [Boolean] default = False
+PRESSURE_DEPENDENT_FRAZIL = False !   [Boolean] default = False
                                 ! If true, use a pressure dependent freezing temperature when making frazil. The
                                 ! default is false, which will be faster but is inappropriate with ice-shelf
                                 ! cavities.
