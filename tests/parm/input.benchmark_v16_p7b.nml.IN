@@ -129,7 +129,7 @@
   fhlwr        = 3600.
   ialb         = @[IALB]
   iems         = @[IEMS]
-  iaer         = @[IAER]
+  iaer         = 5111 
   icliq_sw     = 2
   iovr         = 3
   ico2         = 2
