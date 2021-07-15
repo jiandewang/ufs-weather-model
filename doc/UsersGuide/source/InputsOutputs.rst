@@ -215,8 +215,6 @@ The static input files for global configurations are listed and described in :nu
 Grid description and initial condition files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: Information needed
-
 The input files containing grid information and the initial conditions for global configurations are listed and described in :numref:`Table %s <MOM6_GridICFiles>`.
 
 .. _MOM6_GridICFiles:
