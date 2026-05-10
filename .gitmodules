@@ -22,6 +22,8 @@
   path = MOM6-interface/MOM6
   url = https://github.com/NOAA-EMC/MOM6
   branch = dev/emc
+  url = https://github.com/jiandewang/MOM6
+  branch = test/NCAR-20260422 
 [submodule "CICE"]
   path = CICE-interface/CICE
   url = https://github.com/NOAA-EMC/CICE

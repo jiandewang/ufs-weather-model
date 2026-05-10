@@ -326,7 +326,7 @@ list(APPEND mom6_src_files
   MOM6/config_src/external/MARBL/marbl_interface.F90
   MOM6/config_src/external/MARBL/marbl_interface_public_types.F90
   MOM6/config_src/external/MARBL/marbl_logging.F90
-
+  MOM6/config_src/external/stochastic_physics/stochy_data_mod.F90
 )
 
 list(APPEND mom6_nuopc_src_files
