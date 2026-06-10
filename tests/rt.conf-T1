@@ -1,0 +1,36 @@
+### S2S tests ###
+
+#GEFS
+COMPILE | s2swa_32bit  | intel | -DAPP=S2SWA -D32BIT=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_v17_coupled_p8_ugwpv1 |          | fv3 |
+RUN | cpld_control_gefs                                 | - noaacloud derecho gaeac6          | baseline |
+
+# DEBUG
+COMPILE | s2s_32bit_sfs_debug | intel | -DAPP=S2S -D32BIT=ON -DHYDRO=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1 -DDEBUG=ON | - noaacloud | fv3 |
+RUN | cpld_debug_sfs                                    | - noaacloud                          | baseline |
+
+
+### CDEPS Data Atmosphere tests ###
+COMPILE | datm_cdeps | intel | -DAPP=NG-GODAS -DWARN_AS_ERROR=OFF | - wcoss2         | fv3 |
+RUN | datm_cdeps_control_cfsr                           | - wcoss2                             | baseline |
+RUN | datm_cdeps_iau_gefs                               | - wcoss2                             | baseline |
+RUN | datm_cdeps_stochy_gefs                            | - wcoss2                             | baseline |
+
+COMPILE | datm_cdeps_debug | intel | -DAPP=NG-GODAS -DDEBUG=ON | - wcoss2 acorn noaacloud    | fv3 |
+RUN | datm_cdeps_debug_cfsr                             | - wcoss2 acorn noaacloud             | baseline |
+
+### CDEPS Data Atmosphere tests with LND ###
+### Intel (LLVM) Tests ######
+#############################
+
+# GFS
+COMPILE | s2sw_32bit_pdlib       | intelllvm | -DAPP=S2SW -D32BIT=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1 -DPDLIB=ON | + ursa | fv3 |
+RUN | cpld_control_gfsv17                               | + ursa                              | baseline |
+
+COMPILE | s2sw_32bit_pdlib_debug | intelllvm | -DAPP=S2SW -D32BIT=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1 -DPDLIB=ON -DDEBUG=ON | + ursa | fv3 |
+RUN | cpld_debug_gfsv17                                 | + ursa                               | baseline |
+
+# SFS
+# HAFS
+COMPILE | hafs_mom6w  | intelllvm | -DAPP=HAFS-MOM6W -DREGIONAL_MOM6=ON -DCDEPS_INLINE=ON -DMOVING_NEST=ON -DCCPP_SUITES=FV3_HAFS_v1_gfdlmp_tedmf,FV3_HAFS_v1_gfdlmp_tedmf_nonsst,FV3_HAFS_v1_thompson,FV3_HAFS_v1_thompson_nonsst -D32BIT=ON | + ursa | fv3 |
+RUN | hafs_regional_storm_following_1nest_atm_ocn_wav_mom6        | + ursa                        | baseline |
+
