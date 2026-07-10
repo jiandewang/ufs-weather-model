@@ -8,8 +8,10 @@
   branch = dev/ufs-weather-model
 [submodule "stochastic_physics"]
   path = stochastic_physics
-  url = https://github.com/NOAA-PSL/stochastic_physics
-  branch = master
+#  url = https://github.com/NOAA-PSL/stochastic_physics
+#  branch = master
+  url = https://github.com/iangrooms/stochastic_physics 
+  branch = noaa-sync
 [submodule "CMakeModules"]
   path = CMakeModules
   url = https://github.com/NOAA-EMC/CMakeModules
@@ -20,8 +22,10 @@
   branch = emc/develop
 [submodule "MOM6"]
   path = MOM6-interface/MOM6
-  url = https://github.com/NOAA-EMC/MOM6
-  branch = dev/emc
+#  url = https://github.com/NOAA-EMC/MOM6
+#  branch = dev/emc
+  url = https://github.com/jiandewang/MOM6
+  branch = feature/update-MOM6-20260710 
 [submodule "CICE"]
   path = CICE-interface/CICE
   url = https://github.com/NOAA-EMC/CICE
