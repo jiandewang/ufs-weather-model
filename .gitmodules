@@ -8,12 +8,8 @@
   branch = dev/ufs-weather-model
 [submodule "stochastic_physics"]
   path = stochastic_physics
-#  url = https://github.com/NOAA-PSL/stochastic_physics
-#  branch = master
-#  url = https://github.com/iangrooms/stochastic_physics 
-#  branch = noaa-sync
-  url = https://github.com/ESCOMP/stochastic_physics
-  branch = noaa-sync_june2026
+  url = https://github.com/NOAA-PSL/stochastic_physics
+  branch = master
 [submodule "CMakeModules"]
   path = CMakeModules
   url = https://github.com/NOAA-EMC/CMakeModules
