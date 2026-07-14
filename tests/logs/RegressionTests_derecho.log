@@ -46,6 +46,7 @@ COMPARISON DIRECTORY: /glade/derecho/scratch/gpetro/FV3_RT/rt_13314
 
 RT.SH OPTIONS USED:
 * (-a) - HPC PROJECT ACCOUNT: NRAL0032
+* (-l) - USE CONFIG FILE: rta.conf
 * (-e) - USE ECFLOW
 
 PASS -- COMPILE 's2swa_32bit_intel' [43:19, 26:21] ( 1 warnings 1051 remarks )
