@@ -37,7 +37,7 @@ list(APPEND mom6_src_files
   MOM6/src/ALE/Recon1d_PPM_H4_2018.F90
   MOM6/src/ALE/Recon1d_PPM_H4_2019.F90
   MOM6/src/ALE/Recon1d_PPM_hybgen.F90
-  MOM6/ALE/Recon1d_PLM_WLS.F90
+  MOM6/srcALE/Recon1d_PLM_WLS.F90
   MOM6/src/ALE/Recon1d_type.F90
 
   MOM6/src/core/MOM.F90
