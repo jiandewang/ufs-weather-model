@@ -1,0 +1,21 @@
+#############################
+
+### S2S tests ###
+
+#GEFS
+COMPILE | s2swa_32bit  | intel | -DAPP=S2SWA -D32BIT=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_v17_coupled_p8_ugwpv1 |          | fv3 |
+RUN | cpld_control_gefs                                 | - noaacloud derecho gaeac6          | baseline |
+#RUN | cpld_nothr_gefs                                   | - noaacloud derecho                 |          |
+
+#GFS
+COMPILE | s2sw_32bit_pdlib  | intel | -DAPP=S2SW -D32BIT=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1 -DPDLIB=ON -DUFS_TRACING=ON | - noaacloud | fv3 |
+RUN | cpld_control_gfsv17                               | - noaacloud                          | baseline |
+
+COMPILE | s2sw | intel | -DAPP=S2SW -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_v17_coupled_p8_ugwpv1 | | fv3 |
+RUN | cpld_control_c192_p8                              | - wcoss2 acorn noaacloud derecho     | baseline |
+
+# CPLD LND
+
+COMPILE | hafs_mom6w | intel| -DAPP=HAFS-MOM6W -DREGIONAL_MOM6=ON -DCDEPS_INLINE=ON -DMOVING_NEST=ON -DCCPP_SUITES=FV3_HAFS_v1_gfdlmp_tedmf,FV3_HAFS_v1_gfdlmp_tedmf_nonsst,FV3_HAFS_v1_thompson,FV3_HAFS_v1_thompson_nonsst -D32BIT=ON | - noaacloud | fv3 |
+RUN | hafs_regional_storm_following_1nest_atm_ocn_wav_mom6    | - noaacloud            | baseline |
+
