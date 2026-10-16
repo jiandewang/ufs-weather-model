@@ -694,7 +694,7 @@ MLE_MLD_DECAY_TIME = 2.592E+06  !   [s] default = 0.0
 
 ! === module MOM_diabatic_driver ===
 ! The following parameters are used for diabatic processes.
-USE_LEGACY_DIABATIC_DRIVER = True !   [Boolean] default = False
+USE_LEGACY_DIABATIC_DRIVER = True !   [Boolean] default = True
                                 ! If true, use a legacy version of the diabatic subroutine. This is temporary
                                 ! and is needed to avoid change in answers.
 ENERGETICS_SFC_PBL = True       !   [Boolean] default = False
