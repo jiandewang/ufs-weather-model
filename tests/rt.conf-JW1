@@ -103,6 +103,14 @@ COMPILE | datm_cdeps_debug | intel | -DAPP=NG-GODAS -DDEBUG=ON | - wcoss2 acorn 
 RUN | datm_cdeps_debug_cfsr                             | - wcoss2 acorn noaacloud             | baseline |
 
 
+### AMIP+ tests ###
+COMPILE | atm_ds2s_docn_pcice | intel | -DAPP=ATM_DS2S-PCICE -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 | | fv3 |
+RUN | atm_ds2s_docn_pcice                               | - noaacloud                          | baseline |
+#Needs updating
+#COMPILE | atm_ds2s_docn_dice | intel | -DAPP=ATM_DS2S  -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1 | - wcoss2 acorn  | fv3 |
+#RUN | atm_ds2s_docn_dice                                | - noaacloud wcoss2 acorn             | baseline | cpld_control_nowave_noaero_p8
+
+
 #############################
 ### Intel (LLVM) Tests ######
 #############################
@@ -143,6 +151,7 @@ RUN | datm_gfs_icethermo                                | + ursa                
 ### Gnu Tests ###############
 #############################
 
+### CCPP PROD tests ###
 
 ### S2S tests ###
 
@@ -167,3 +176,4 @@ RUN | cpld_debug_sfs                                    | + hera hercules ursa d
 COMPILE | datm_cdeps | gnu | -DAPP=NG-GODAS -DWARN_AS_ERROR=OFF | + hera hercules ursa derecho| fv3 |
 RUN | datm_cdeps_control_cfsr                           | + hera hercules ursa derecho         | baseline |
 
+### UFS with MPAS dynamical core ###
