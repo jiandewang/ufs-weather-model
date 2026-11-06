@@ -263,6 +263,8 @@ list(APPEND mom6_src_files
   MOM6/src/tracer/MARBL_forcing_mod.F90
   MOM6/src/tracer/MARBL_tracers.F90
   MOM6/src/tracer/MOM_tracer_advect_schemes.F90
+  MOM6/src/tracer/MOM_tracer_numerical_mixing.F90
+  MOM6/src/tracer/file_dye_tracer.F90
 
   MOM6/src/user/BFB_initialization.F90
   MOM6/src/user/BFB_surface_forcing.F90
@@ -325,6 +327,7 @@ list(APPEND mom6_src_files
   MOM6/config_src/infra/FMS2/MOM_interp_infra.F90
   MOM6/config_src/infra/FMS2/MOM_io_infra.F90
   MOM6/config_src/infra/FMS2/MOM_time_manager.F90
+  MOM6/config_src/infra/FMS2/MOM_field_manager_infra.F90
   MOM6/config_src/external/MARBL/marbl_constants_mod.F90
   MOM6/config_src/external/MARBL/marbl_interface.F90
   MOM6/config_src/external/MARBL/marbl_interface_public_types.F90
@@ -355,6 +358,7 @@ list(APPEND mom6_nuopc_src_files
   MOM6/config_src/drivers/timing_tests/time_MOM_EOS.F90
   MOM6/config_src/drivers/timing_tests/time_MOM_remapping.F90
   MOM6/config_src/drivers/timing_tests/time_reproducing_sum.F90
+  MOM6/config_src/drivers/nuopc_cap/mom_cap_fms_coupler_bcs.F90
 )
 
 list(APPEND mom6_solo_src_files
